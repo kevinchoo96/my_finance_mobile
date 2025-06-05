@@ -1,16 +1,14 @@
 # my_finance_mobile
 
-A new Flutter project.
+My Finance Mobile Flutter App
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+- Flutter Version is 3.16.0, if you have this app version then you may install the app on your device.
+- Please ensure dart and flutter is installed on your device.
+- Steps to install flutter can be done from the following guideline:
+https://docs.flutter.dev/get-started/install
 
-A few resources to get you started if this is your first Flutter project:
+- App can be installed on device running command "flutter run". If flutter is installed correctly, this should work fine.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- An apk will be provided for your testing as well for convenience.
