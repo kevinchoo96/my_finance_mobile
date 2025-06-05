@@ -41,7 +41,10 @@ dependencies:
   flutter_svg: ^2.0.10+1
   fluttertoast: ^8.2.5
   http: ^1.2.0
+  month_year_picker: ^0.3.0+1
   shared_preferences: ^2.2.2
+  flutter_localizations:
+    sdk: flutter
   
 dev_dependencies:
   flutter_test:

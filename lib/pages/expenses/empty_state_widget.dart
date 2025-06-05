@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class EmptyState extends StatelessWidget {
+class EmptyStateWidget extends StatelessWidget {
   final String message;
 
-  const EmptyState({super.key, this.message = "No expenses found."});
+  const EmptyStateWidget({super.key, this.message = "No expenses found."});
 
   @override
   Widget build(BuildContext context) {

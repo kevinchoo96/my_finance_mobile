@@ -7,6 +7,8 @@ import 'package:my_finance_mobile/pages/register_form.dart';
 import 'package:my_finance_mobile/pages/show_expense.dart';
 import 'package:my_finance_mobile/pages/create_expense_form.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:month_year_picker/month_year_picker.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -32,7 +34,16 @@ class MyApp extends StatelessWidget {
           foregroundColor: Colors.white,
           elevation: 4,
         ),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.red,
+        ),
       ),
+      localizationsDelegates: const [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        MonthYearPickerLocalizations.delegate,
+      ],
       initialRoute: isLoggedIn ? '/home' : '/login',
       routes: {
         '/register': (context) => const RegisterForm(),

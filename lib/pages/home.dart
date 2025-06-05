@@ -4,7 +4,7 @@ import 'package:my_finance_mobile/pages/expense_list_item.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-import 'package:my_finance_mobile/pages/expenses/empty_state.dart';
+import 'package:my_finance_mobile/pages/expenses/empty_state_widget.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class HomePage extends StatefulWidget {
@@ -48,7 +48,6 @@ class HomePageState extends State {
       },
     );
 
-    print(response.statusCode);
     if (response.statusCode == 200) {
       prefs.remove('token');
       Navigator.pushReplacementNamed(context, '/login');
@@ -78,7 +77,7 @@ class HomePageState extends State {
             ),
             ListTile(
               leading: const Icon(Icons.show_chart),
-              title: const Text("Check Summary"),
+              title: const Text("Summary"),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.pushNamed(context, '/summary');
@@ -109,7 +108,7 @@ class HomePageState extends State {
           final expenses = snapshot.data ?? [];
 
           if (expenses.isEmpty) {
-            return const EmptyState();
+            return const EmptyStateWidget();
           }
 
           return ListView.separated(
